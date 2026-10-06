@@ -14,6 +14,7 @@ import UpdateProfile from "./pages/UpdateProfile";
 import Dashboard from "./pages/Dashboard";
 import Spinner from "./components/Spinner";
 import Error from "./pages/Error";
+
 import { useAuthStore } from "./store/authStore";
 
 const ProtectedRoutes = () => {
@@ -58,7 +59,7 @@ const VerifyEmailRoute = ({ children }) => {
 };
 
 const App = () => {
-  const { checkAuth, isCheckingAuth } = useAuthStore();
+  const { checkAuth, isCheckingAuth} = useAuthStore();
 
   useEffect(() => {
     checkAuth();
