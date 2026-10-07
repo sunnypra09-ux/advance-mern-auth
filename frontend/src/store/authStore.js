@@ -1,7 +1,10 @@
 import { create } from "zustand";
 import Axios from "axios";
 
-const API_URL = import.meta.env.MODE === "development" ? "http://localhost:5001/api/v1/auth": "/api/auth"
+const API_URL =
+  import.meta.env.MODE === "development"
+    ? "http://localhost:5001/api/v1/auth"
+    : "https://sunny-auth-backend.onrender.com/api/v1/auth";
 
 Axios.defaults.withCredentials = true;
 export const useAuthStore = create((set) => ({
